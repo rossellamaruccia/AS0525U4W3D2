@@ -22,7 +22,7 @@ public class Evento {
     @Column(name = "descrizione", nullable = false, columnDefinition = "TEXT")
     private String descrizione;
 
-    @Column(name = "tipo_evento", nullable = false)
+    @Column(name = "tipo_evento", nullable = true)
     @Enumerated(EnumType.STRING)
     private tipoEvento tipo_evento;
 
@@ -36,6 +36,7 @@ public class Evento {
         this.titolo = titolo;
         this.data_evento = LocalDate.of(2026, 1, 20);
         this.descrizione = descrizione;
+        this.tipo_evento = tipo_evento;
         this.numero_max_partecipanti = numero_max_partecipanti;
     }
 
@@ -86,7 +87,7 @@ public class Evento {
 
     @Override
     public String toString() {
-        return "Evento: id" + id + ", titolo " + titolo + ", descrizione " + descrizione;
+        return "Evento: id " + id + ", titolo " + titolo + ", descrizione " + descrizione;
     }
 
 }

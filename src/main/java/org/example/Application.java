@@ -18,6 +18,12 @@ public class Application {
         Evento esibizione = new Evento("Echo", "spettacolo del Cirque du Soleil", tipoEvento.PUBBLICO, 600);
         Evento mostra = new Evento("La seduzione della pittura", "Giovanni Boldini alla Cavallerizza di Piazzale verdi di Lucca", tipoEvento.PUBBLICO, 1000);
 
+        ed.save(concerto);
+        ed.save(esibizione);
+        ed.save(mostra);
+
+        ed.findByIdAndDelete(2);
+
         System.out.println(concerto.toString());
         System.out.println(esibizione.toString());
         System.out.println(mostra.toString());
