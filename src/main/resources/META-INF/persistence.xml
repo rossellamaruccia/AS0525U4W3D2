@@ -5,7 +5,7 @@
     <persistence-unit name="U4W3D2_pu">
 
         <!-- TODO: Aggiungi elenco delle entities -->
-        <!--<class>riccardogulin.entities.Student</class>-->
+        <class>entities.Evento</class>
 
         <properties>
             <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/U4W3D2"/>
